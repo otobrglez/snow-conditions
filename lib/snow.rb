@@ -49,7 +49,7 @@ class Snow
       info = state
 
       unless redis.exists info.key
-        redis.set info.key, info.value, {ex: 604800} # 7 days
+        redis.set info.key, info.value #, {ex: 604800} # 7 days
         notify info
       end
 
