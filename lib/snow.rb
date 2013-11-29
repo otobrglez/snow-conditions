@@ -4,6 +4,7 @@
 require "httparty"
 require "nokogiri"
 require 'digest/sha1'
+require_relative "snow_information"
 
 class HtmlParserIncluded < HTTParty::Parser
   SupportedFormats.merge!('text/html' => :html)
@@ -23,21 +24,8 @@ class Snow
       elements = get("/snegraz.html").xpath("//td[@class='vsebina']/p")
       SnowInformation.new(elements[0].text, elements[2].text, elements[3].text)
     rescue StandardError => error
-      raise ParsingError, "Error parsing data from page"
+      raise ParsingError, "Error parsing"
     end
   end
 
 end
-
-SnowInformation = Struct.new(:date, :level, :details) do
-
-  def date
-    @date ||= Date.parse(self[:date])
-  end
-
-  def sha
-    @sha ||= Digest::SHA1.hexdigest (values * "-")
-  end
-
-end
-

@@ -4,7 +4,14 @@ source 'http://rubygems.org'
 gem 'httparty'
 gem 'nokogiri'
 
-gem 'rspec'
-gem 'pry'
+group :test do
+  gem 'rspec'
+  gem 'pry'
+  gem 'webmock'
+end
 
-gem 'webmock'
+group :development do
+  gem 'foreman'
+end
+
+gem 'clockwork'

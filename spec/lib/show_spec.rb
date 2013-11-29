@@ -1,8 +1,5 @@
 require "spec_helper"
 
-require "show"
-require "pry"
-
 describe Snow do
 
   context "parsing error" do
