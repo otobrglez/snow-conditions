@@ -2,9 +2,12 @@ require_relative "snow"
 require "clockwork"
 
 module Clockwork
+
   handler do |job, time|
-    puts "Running #{job} at #{time}"
+    if job == "snow_parse.job"
+      puts(Snow.process.key)
+    end
   end
 
-  every(5.seconds, 'parse_snow.job')
+  every(30.minutes, 'snow_parse.job')
 end

@@ -36,6 +36,7 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    redis (3.0.6)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -59,9 +60,11 @@ PLATFORMS
 
 DEPENDENCIES
   clockwork
+  dotenv
   foreman
   httparty
   nokogiri
   pry
+  redis
   rspec
   webmock

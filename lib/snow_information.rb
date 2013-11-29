@@ -8,4 +8,12 @@ SnowInformation = Struct.new(:date, :level, :details) do
     @sha ||= Digest::SHA1.hexdigest (values * "-")
   end
 
+  def key
+    "#{date}-#{sha}"
+  end
+
+  def value
+    1
+  end
+
 end

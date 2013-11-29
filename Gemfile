@@ -8,6 +8,7 @@ group :test do
   gem 'rspec'
   gem 'pry'
   gem 'webmock'
+  gem 'dotenv'
 end
 
 group :development do
@@ -15,3 +16,4 @@ group :development do
 end
 
 gem 'clockwork'
+gem 'redis'
