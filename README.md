@@ -11,19 +11,19 @@ Service uses [Nokogiri](http://nokogiri.org/) for parsing HTML, [HTTParty](https
 
 1. Create new project on [Heroku](https://www.heroku.com/).
 
-2. Add [Redis To Go - Nano](https://addons.heroku.com/redistogo#nano) to [Heroku](https://www.heroku.com/) yout instance.
+2. Add [Redis To Go - Nano](https://addons.heroku.com/redistogo#nano) to [Heroku](https://www.heroku.com/) your instance.
 
-    heroku addons:add redistogo
+  heroku addons:add redistogo
 
 3. Create new [Pushover Application](https://pushover.net/apps).
 
 4. Set [Pushover](https://pushover.net/) User and APP keys as environment variables
 
-    heroku config:set PUSHOVER_KEY=<app_key_here> PUSHOVER_USER=<user_key_here>
+  heroku config:set PUSHOVER_KEY=app_key_here PUSHOVER_USER=user_key_here
 
 5. Scale Heroku instance to 1 worker. *One worker is free.*
 
-    heroku ps:scale bot=1
+  heroku ps:scale bot=1
 
 6. Thats it. You should get Pushover notification in 3,... 2,... 1...
 
