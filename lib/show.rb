@@ -14,21 +14,19 @@ end
 class Snow
   include HTTParty
   parser HtmlParserIncluded
-
   base_uri 'http://www.arso.gov.si/vreme/napovedi%20in%20podatki'
+
+  class ParsingError < StandardError; end;
 
   def self.state
     begin
       elements = get("/snegraz.html").xpath("//td[@class='vsebina']/p")
-
       SnowInformation.new(elements[0].text, elements[2].text, elements[3].text)
-
-    rescue
-      raise SnowParsingError("Error parsing data from page")
+    rescue StandardError => error
+      raise ParsingError, "Error parsing data from page"
     end
   end
 
-  class SnowParsingError < StandardError; end;
 end
 
 SnowInformation = Struct.new(:date, :level, :details) do
