@@ -17,3 +17,5 @@ end
 
 gem 'clockwork'
 gem 'redis'
+
+gem 'heroku'
