@@ -27,6 +27,18 @@ Service uses [Nokogiri](http://nokogiri.org/) for parsing HTML, [HTTParty](https
 
 6. Thats it. You should get Pushover notification in 3,... 2,... 1...
 
+## Testing
+
+1. Create new `.env` inside current folder. Set following values.
+
+<pre>
+REDIS_URL=redis://127.0.0.1:6379
+PUSHOVER_KEY=pushover_app_key
+PUSHOVER_USER=pushover_user_key
+</pre>
+
+2. Run `rspec`.
+
 ## Contribution
 
 Fork. Share. Have fun.
