@@ -19,4 +19,4 @@ end
 gem 'clockwork'
 gem 'redis'
 
-gem 'heroku'
+gem 'excon', '~> 0.27.5'
