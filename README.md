@@ -5,7 +5,7 @@ Get snow conditions from [Slovenian Environment Agency (ARSO)](http://www.arso.g
 Service uses [Nokogiri](http://nokogiri.org/) for parsing HTML, [HTTParty](https://github.com/jnunemaker/httparty) as lib for fetching content. [Clockworks](https://github.com/adamwiggins/clockwork) for doing its magic in loop. Push notifications are dispatched via [Pushover](https://pushover.net) and everything is running on [Heroku](https://www.heroku.com/) with [Redis](http://redis.io).
 
 
-![snow-conditions via Pusher](https://dl.dropboxusercontent.com/u/697441/snow-conditions.png)
+![snow-conditions via Pusher](https://photos-5.dropbox.com/t/0/AAAoY1C_pJOivd514c0fe_nCeNk3X1863EiosumpAA2J7Q/12/697441/png/1024x768/3/1390230000/0/2/snow-conditions.png/CtU659fhKGR2aZ3aS5G3L9nPdkpeq81dv8iR1UQ44ew)
 
 ## Setup on Heroku
 
